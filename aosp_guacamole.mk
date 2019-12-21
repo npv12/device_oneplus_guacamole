@@ -45,10 +45,8 @@ TARGET_INCLUDE_WIFI_EXT := true
 TARGET_HAS_FOD := true
 
 # Build info
-BUILD_FINGERPRINT := "OnePlus/OnePlus7Pro/OnePlus7Pro:10/QKQ1.190716.003/2007240000:user/release-keys"
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_DEVICE=OnePlus7Pro \
-    PRODUCT_NAME=OnePlus7Pro \
-    PRIVATE_BUILD_DESC="OnePlus7Pro-user 10 QKQ1.190716.003 2007240000 release-keys"
+    PRODUCT_NAME=OnePlus7Pro
 
 PRODUCT_GMS_CLIENTID_BASE := android-oneplus
