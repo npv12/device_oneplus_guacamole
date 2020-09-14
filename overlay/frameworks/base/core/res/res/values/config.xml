@@ -293,6 +293,9 @@
      <!-- If true, the display will be shifted around in ambient mode. -->
      <bool name="config_enableBurnInProtection">true</bool>
 
+     <!-- Whether the device supports Smart Pixels -->
+     <bool name="config_enableSmartPixels">true</bool> 
+
     <!-- Not allow to switch to higher refresh rate when (display, ambient) brightness falls into
          the region defined by the two arrays -->
     <integer-array name="config_brightnessThresholdsOfPeakRefreshRate">
