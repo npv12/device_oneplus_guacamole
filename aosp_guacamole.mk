@@ -35,11 +35,14 @@ TARGET_HAS_FOD := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
 
 # Launcher choice
-TARGET_LAUNCHER_CHOICE := oplauncher
+export TARGET_LAUNCHER_CHOICE := oplauncher
 
 # Gapps
 TARGET_GAPPS_ARCH := arm64
 TARGET_INCLUDE_WIFI_EXT := true
+
+#Pixel Live Wallpaper
+TARGET_PIXEL_LWP := true
 
 # FOD
 TARGET_HAS_FOD := true

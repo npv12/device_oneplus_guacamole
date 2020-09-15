@@ -293,8 +293,22 @@
      <!-- If true, the display will be shifted around in ambient mode. -->
      <bool name="config_enableBurnInProtection">true</bool>
 
+     <!-- Whether device has a physical display cutout -->
+     <bool name="config_physicalDisplayCutout">false</bool>
+
      <!-- Whether the device supports Smart Pixels -->
      <bool name="config_enableSmartPixels">true</bool> 
+
+     <!-- Smart Charing is available -->
+     <bool name="config_smartChargingAvailable">true</bool>
+
+     <!-- Smart charge sysfs node and value for suspend/resume charging-->
+     <string name="config_SmartChargingSysfsNode" translatable="false">/sys/class/power_supply/battery/input_suspend</string>
+     <string name="config_SmartChargingSuspendValue" translatable="false">1</string>
+     <string name="config_SmartChargingResumeValue" translatable="false">0</string>
+
+     <!-- Whether device has screen off FOD support -->
+     <bool name="config_supportScreenOffFod">true</bool>
 
     <!-- Not allow to switch to higher refresh rate when (display, ambient) brightness falls into
          the region defined by the two arrays -->
