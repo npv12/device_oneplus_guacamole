@@ -19,7 +19,7 @@
     <string name="maintainer_telegram" translatable="false">https://t.me/pranav10121</string>
 
     <!-- About - Device specific links -->
-    <string name="about_device_recovery_ver" translatable="false">twrp.zip</string> <!-- Recovery version -->
-    <string name="about_device_recovery_link" translatable="false">No need, already included :)</string> <!-- Recovery link -->
+    <string name="about_device_recovery_ver" translatable="false">twrp already included :)</string> <!-- Recovery version -->
+    <string name="about_device_recovery_link" translatable="false">https://www.google.co.in</string> <!-- Recovery link -->
 
 </resources>
