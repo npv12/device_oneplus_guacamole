@@ -411,16 +411,17 @@
     <ctl name="EAR PA Gain" value="G_6_DB" />
     <ctl name="EAR SPKR PA Gain" value="G_DEFAULT" />
 
-    <ctl name="RX0 Digital Volume" value="84" />
-    <ctl name="RX1 Digital Volume" value="84" />
-    <ctl name="RX2 Digital Volume" value="84" />
-    <ctl name="RX3 Digital Volume" value="84" />
-    <ctl name="RX4 Digital Volume" value="84" />
-    <ctl name="RX5 Digital Volume" value="84" />
-    <ctl name="RX6 Digital Volume" value="84" />
-    <ctl name="RX7 Digital Volume" value="84" />
-    <ctl name="ADC1 Volume" value="12" />
-    <ctl name="ADC2 Volume" value="12" />
+    <ctl name="RX0 Digital Volume" value="92" />
+    <ctl name="RX1 Digital Volume" value="92" />
+    <ctl name="RX2 Digital Volume" value="92" />
+    <ctl name="RX3 Digital Volume" value="92" />
+    <ctl name="RX4 Digital Volume" value="92" />
+    <ctl name="RX5 Digital Volume" value="92" />
+    <ctl name="RX6 Digital Volume" value="92" />
+    <ctl name="RX7 Digital Volume" value="92" />
+    <ctl name="ADC1 Volume" value="20" />
+    <ctl name="ADC2 Volume" value="20" />
+
     <!-- #ifdef VENDOR_EDIT-->
     <ctl name="ADC3 Volume" value="12" />
     <ctl name="ADC4 Volume" value="12" />
