@@ -20,6 +20,12 @@ $(call inherit-product, vendor/xtended/config/common_full_phone.mk)
 # Boot animation
 TARGET_BOOT_ANIMATION_RES := 1440
 
+# Maintainer
+XTENDED_MAINTAINER := TheDaemon
+
+# Build Type
+XTENDED_BUILD_TYPE := OFFICIAL
+
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := xtended_guacamole
 PRODUCT_DEVICE := guacamole
