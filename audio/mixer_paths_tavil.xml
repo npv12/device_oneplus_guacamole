@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!-- Copyright (c) 2016-2020, The Linux Foundation. All rights reserved.    -->
+<!-- Copyright (c) 2016-2019, The Linux Foundation. All rights reserved.    -->
 <!--                                                                        -->
 <!-- Redistribution and use in source and binary forms, with or without     -->
 <!-- modification, are permitted provided that the following conditions are -->
@@ -78,7 +78,6 @@
     <ctl name="MultiMedia8 Mixer SLIM_4_TX" value="0" />
     <ctl name="MultiMedia8 Mixer SLIM_7_TX" value="0" />
     <ctl name="MultiMedia10 Mixer SLIM_0_TX" value="0" />
-    <ctl name="MultiMedia10 Mixer SLIM_1_TX" value="0" />
     <ctl name="MultiMedia10 Mixer SLIM_7_TX" value="0" />
     <ctl name="MultiMedia10 Mixer AFE_PCM_TX" value="0" />
     <ctl name="MultiMedia17 Mixer SLIM_0_TX" value="0" />
@@ -300,9 +299,6 @@
     <ctl name="VoiceMMode1_Tx Mixer USB_AUDIO_TX_MMode1" value="0" />
     <!-- Multimode Voice1 Display-Port -->
     <ctl name="DISPLAY_PORT_RX_Voice Mixer VoiceMMode1" value="0" />
-    <!-- Multimode Voice1 proxy-Port -->
-    <ctl name="PROXY_RX_Voice Mixer VoiceMMode1" value="0" />
-    <ctl name="VoiceMMode1_Tx Mixer PROXY_TX_MMode1" value="0" />
     <!-- Miltimode Voice1 end-->
 
     <!-- Multimode Voice2 -->
@@ -320,9 +316,6 @@
     <ctl name="VoiceMMode2_Tx Mixer USB_AUDIO_TX_MMode2" value="0" />
     <!-- Multimode Voice2 Display-Port -->
     <ctl name="DISPLAY_PORT_RX_Voice Mixer VoiceMMode2" value="0" />
-    <!-- Multimode Voice2 proxy-Port -->
-    <ctl name="PROXY_RX_Voice Mixer VoiceMMode2" value="0" />
-    <ctl name="VoiceMMode2_Tx Mixer PROXY_TX_MMode2" value="0" />
     <!-- Multimode Voice2 end-->
 
     <!-- Voice external ec. reference -->
@@ -337,8 +330,12 @@
     <!-- RT Proxy Cal end -->
 
     <!-- Incall Recording -->
+    <ctl name="MultiMedia1 Mixer VOC_REC_UL" value="0" />
+    <ctl name="MultiMedia1 Mixer VOC_REC_DL" value="0" />
+    <!--v-ye.liy@oneplus.com @MM.Audio, 2020/11/13,Update MultMedia for call record Start-->
     <ctl name="MultiMedia9 Mixer VOC_REC_UL" value="0" />
     <ctl name="MultiMedia9 Mixer VOC_REC_DL" value="0" />
+    <!--v-ye.liy@oneplus.com @MM.Audio, 2020/11/13,Update MultMedia for call record end-->
     <ctl name="MultiMedia8 Mixer VOC_REC_UL" value="0" />
     <ctl name="MultiMedia8 Mixer VOC_REC_DL" value="0" />
     <ctl name="MultiMedia17 Mixer VOC_REC_UL" value="0" />
@@ -736,6 +733,44 @@
     <path name="echo-reference-voip display-port">
         <ctl name="AUDIO_REF_EC_UL10 MUX" value="DISPLAY_PORT" />
     </path>
+
+<!--#ifdef VENDOR_EDIT  -->
+<!-- liuhaituo@MM.Audio, 2020/06/22, support voice assitant used 4ch aec record -->
+    <path name="echo-reference aec-speaker">
+        <ctl name="MultiMedia1 Mixer AFE_LOOPBACK_TX" value="1" />
+
+        <ctl name="AUDIO_REF_EC_UL1 MUX" value="QUAT_MI2S_RX" />
+        <ctl name="EC Reference Channels" value="Two" />
+        <ctl name="EC Reference Bit Format" value="S16_LE" />
+        <ctl name="EC Reference SampleRate" value="16000" />
+
+        <ctl name="AFE_LOOPBACK_TX Channels" value="Two" />
+        <ctl name="MultiMedia1 Channels" value="4" />
+
+        <ctl name="MultiMedia1 Channel Rule" value="5" />
+        <ctl name="MultiMedia1 Output Channel1" id ="0" value="16384" />
+        <ctl name="MultiMedia1 Output Channel1" id ="1" value="0" />
+        <ctl name="MultiMedia1 Output Channel1" id ="2" value="0" />
+        <ctl name="MultiMedia1 Output Channel1" id ="3" value="0" />
+        <ctl name="MultiMedia1 Output Channel2" id ="0" value="0" />
+        <ctl name="MultiMedia1 Output Channel2" id ="1" value="16384" />
+        <ctl name="MultiMedia1 Output Channel2" id ="2" value="0" />
+        <ctl name="MultiMedia1 Output Channel2" id ="3" value="0" />
+        <ctl name="MultiMedia1 Output Channel3" id ="0" value="0" />
+        <ctl name="MultiMedia1 Output Channel3" id ="1" value="0" />
+        <ctl name="MultiMedia1 Output Channel3" id ="2" value="16384" />
+        <ctl name="MultiMedia1 Output Channel3" id ="3" value="0" />
+        <ctl name="MultiMedia1 Output Channel4" id ="0" value="0" />
+        <ctl name="MultiMedia1 Output Channel4" id ="1" value="0" />
+        <ctl name="MultiMedia1 Output Channel4" id ="2" value="0" />
+        <ctl name="MultiMedia1 Output Channel4" id ="3" value="16384" />
+
+        <ctl name="MultiMedia1 Channel Mixer" value="Enable" />
+        <ctl name="MultiMedia1 Channel1" value="SLIM_0_TX" />
+        <ctl name="MultiMedia1 Channel2" value="AFE_LOOPBACK_TX" />
+    </path>
+
+<!-- #endif -->
 
     <path name="deep-buffer-playback">
         <ctl name="SLIMBUS_0_RX Audio Mixer MultiMedia1" value="1" />
@@ -1987,9 +2022,11 @@
         <path name="play-fm headphones" />
     </path>
 
+    <!--v-ye.liy@oneplus.com @MM.Audio, 2020/11/13,Update MultMedia for call record Start-->
     <path name="incall-rec-uplink">
         <ctl name="MultiMedia9 Mixer VOC_REC_UL" value="1" />
     </path>
+    <!--v-ye.liy@oneplus.com @MM.Audio, 2020/11/13,Update MultMedia for call record end-->
 
     <path name="incall-rec-uplink bt-sco">
         <path name="incall-rec-uplink" />
@@ -2015,10 +2052,6 @@
         <ctl name="MultiMedia8 Mixer VOC_REC_UL" value="1" />
     </path>
 
-    <path name="incall-rec-uplink call-proxy-in">
-        <path name="incall-rec-uplink" />
-    </path>
-
     <path name="incall-rec-uplink-compress headset-mic">
         <path name="incall-rec-uplink-compress" />
     </path>
@@ -2039,9 +2072,11 @@
         <path name="incall-rec-uplink-compress" />
     </path>
 
+    <!--v-ye.liy@oneplus.com @MM.Audio, 2020/11/13,Update MultMedia for call record Start-->
     <path name="incall-rec-downlink">
         <ctl name="MultiMedia9 Mixer VOC_REC_DL"  value="1" />
     </path>
+    <!--v-ye.liy@oneplus.com @MM.Audio, 2020/11/13,Update MultMedia for call record end-->
 
     <path name="incall-rec-downlink bt-sco">
         <path name="incall-rec-downlink" />
@@ -2065,10 +2100,6 @@
 
     <path name="incall-rec-downlink-compress">
         <ctl name="MultiMedia8 Mixer VOC_REC_DL" value="1" />
-    </path>
-
-    <path name="incall-rec-downlink call-proxy-in">
-        <path name="incall-rec-downlink" />
     </path>
 
     <path name="incall-rec-downlink-compress headset-mic">
@@ -2119,10 +2150,6 @@
     <path name="incall-rec-uplink-and-downlink-compress">
         <path name="incall-rec-uplink-compress" />
         <path name="incall-rec-downlink-compress" />
-    </path>
-
-    <path name="incall-rec-uplink-and-downlink call-proxy-in">
-        <path name="incall-rec-uplink-and-downlink" />
     </path>
 
     <path name="incall-rec-uplink-and-downlink-compress bt-sco">
@@ -2221,11 +2248,6 @@
         <ctl name="VoiceMMode1_Tx Mixer SLIM_0_TX_MMode1" value="1" />
     </path>
 
-    <path name="voicemmode1-call call-proxy">
-        <ctl name="PROXY_RX_Voice Mixer VoiceMMode1" value="1" />
-        <ctl name="VoiceMMode1_Tx Mixer PROXY_TX_MMode1" value="1" />
-    </path>
-
 <!-- #ifdef VENDOR_EDIT -->
 <!-- zhangrun@MM.Audio,2020/04/21, add for Hearing Aid feature-->
     <path name="voicemmode1-call hearing-aid">
@@ -2295,11 +2317,6 @@
     <path name="voicemmode2-call">
         <ctl name="SLIM_0_RX_Voice Mixer VoiceMMode2" value="1" />
         <ctl name="VoiceMMode2_Tx Mixer SLIM_0_TX_MMode2" value="1" />
-    </path>
-
-    <path name="voicemmode2-call call-proxy">
-        <ctl name="PROXY_RX_Voice Mixer VoiceMMode2" value="1" />
-        <ctl name="VoiceMMode2_Tx Mixer PROXY_TX_MMode2" value="1" />
     </path>
 
 <!-- #ifdef VENDOR_EDIT -->
@@ -3707,6 +3724,14 @@
         <path name="speaker-dmic-endfire-qrd" />
     </path>
 
+<!--#ifdef VENDOR_EDIT  -->
+<!-- liuhaituo@MM.Audio, 2020/06/22, support voice assitant used 4ch aec record -->
+    <path name="speaker-stereo-dmic-fdx-aec">
+        <path name="handset-dmic-endfire" />
+        <ctl name="DEC7 Volume" value="84" />
+        <ctl name="DEC8 Volume" value="84" />
+    </path>
+
     <path name="voice-dmic-ef-qrd">
         <path name="dmic-endfire-qrd" />
     </path>
@@ -4433,11 +4458,6 @@
         <path name="incall_music_uplink" />
     </path>
 
-    <path name="incall_music_uplink call-proxy">
-        <path name="incall_music_uplink" />
-    </path>
-
-
     <path name="incall_music_uplink2">
         <ctl name="Incall_Music_2 Audio Mixer MultiMedia9" value="1" />
     </path>
@@ -4512,12 +4532,6 @@
 
     <path name="incall_music_uplink2 afe-proxy">
         <path name="incall_music_uplink2" />
-    </path>
-
-    <path name="call-proxy">
-    </path>
-
-    <path name="call-proxy-in">
     </path>
 
 <!-- #ifdef VENDOR_EDIT-->
