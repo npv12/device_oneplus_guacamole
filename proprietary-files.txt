@@ -106,20 +106,6 @@ vendor/lib64/libsdsprpc.so
 vendor/lib/libcvp_common.so
 vendor/lib64/libcvp_common.so
 
-# Display
-vendor/bin/hw/vendor.oneplus.hardware.display@1.0-service
-vendor/lib/hw/hwcomposer.msmnile.so
-vendor/lib/libhdmipassthru.so
-vendor/lib/libsdedrm.so
-vendor/lib/libsdmcore.so
-vendor/lib64/hw/hwcomposer.msmnile.so
-vendor/lib64/libhdmipassthru.so
-vendor/lib64/libsdedrm.so
-vendor/lib64/libsdmcore.so
-
-# Display calibration data
-vendor/etc/qdcm_calib_data_samsung_dsc_cmd_mode_oneplus_dsi_panel.xml
-
 # DRM
 vendor/bin/qseecomd
 vendor/lib/mediadrm/libwvdrmengine.so
@@ -163,11 +149,6 @@ vendor/lib64/libloc_api_v02.so
 vendor/lib64/liblocationservice.so
 vendor/lib64/liblocationservice_glue.so
 vendor/lib64/libslimclient.so
-
-# Graphics firmware
-vendor/firmware/a640_zap.b01
-vendor/firmware/a640_zap.elf
-vendor/firmware/a640_zap.mdt
 
 # IFAA
 vendor/bin/hw/vendor.oneplus.hardware.ifaa@2.0-service
