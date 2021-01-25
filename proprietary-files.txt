@@ -472,7 +472,3 @@ vendor/lib64/libwigig_flashaccess.so
 vendor/lib64/libwigig_pciaccess.so
 vendor/lib64/libwigig_utils.so
 vendor/lib64/libwigigsensing.so
-
-# WiFi Display
-vendor/lib/libwfdconfigutils_proprietary.so
-lib64/libwfdnative.so
