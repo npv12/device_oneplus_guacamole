@@ -159,18 +159,6 @@ vendor/firmware/ipa_uc.b01
 vendor/firmware/ipa_uc.elf
 vendor/firmware/ipa_uc.mdt
 
-# Listen
-vendor/lib/hw/sound_trigger.primary.msmnile.so
-vendor/lib/libgcs-calwrapper.so
-vendor/lib/libgcs-ipc.so
-vendor/lib/libgcs.so
-vendor/lib/liblistenjni.so
-vendor/lib64/hw/sound_trigger.primary.msmnile.so
-vendor/lib64/libgcs-calwrapper.so
-vendor/lib64/libgcs-ipc.so
-vendor/lib64/libgcs.so
-vendor/lib64/liblistenjni.so
-
 # NFC
 vendor/etc/libnfc-nci_beijingbus.conf
 vendor/etc/libnfc-nci_yangchengtong.conf
