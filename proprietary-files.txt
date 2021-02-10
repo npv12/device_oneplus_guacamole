@@ -324,9 +324,6 @@ vendor/lib64/sensors.ssc.so
 # Thermal
 vendor/bin/thermal-engine
 
-# Time services
-vendor/bin/time_daemon
-
 # Vibrator firmware
 vendor/firmware/alarm_breeze.bin
 vendor/firmware/alarm_clock1.bin
