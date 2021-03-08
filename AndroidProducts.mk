@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/xtended_guacamole.mk
+    $(LOCAL_DIR)/derp_guacamole.mk
 
 COMMON_LUNCH_CHOICES := \
-	xtended_guacamole-user \
-	xtended_guacamole-userdebug \
-	xtended_guacamole-eng
+	derp_guacamole-user \
+	derp_guacamole-userdebug \
+	derp_guacamole-eng
