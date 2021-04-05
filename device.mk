@@ -31,6 +31,9 @@ PRODUCT_PACKAGES += \
 
 # Mark as official build
 OFFICIAL_BUILD := true
+
+# Project ID Quota
+$(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
     
 # Wifi Overlay
 PRODUCT_PACKAGES += \
