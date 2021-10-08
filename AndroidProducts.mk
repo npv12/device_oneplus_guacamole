@@ -5,4 +5,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/krypton_guacamole.mk
+    $(LOCAL_DIR)/statix_guacamole.mk
