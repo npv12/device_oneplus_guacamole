@@ -18,6 +18,9 @@ DEVICE_PACKAGE_OVERLAYS += \
 # Project ID Quota
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
+# OnePlus apps
+$(call inherit-product, vendor/oneplus/apps/guacamole/config.mk)
+
 # Audio
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
