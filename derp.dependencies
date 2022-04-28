@@ -6,5 +6,9 @@
   {
     "repository"  : "kernel_oneplus_sm8150",
     "target_path" : "kernel/oneplus/sm8150"
+  },
+  {	
+    "repository"  : "vendor_oneplus_guacamole",
+    "target_path" : "vendor/oneplus/guacamole"
   }
 ]
