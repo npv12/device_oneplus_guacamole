@@ -1,4 +1,4 @@
-# All unpinned blobs below are extracted from OnePlus7ProOxygen_21.P.42_OTA_0420_all_2202112205_8689376
+# All unpinned blobs below are extracted from OnePlus7ProOxygen_21.P.39_GLO_0390_2108161902
 
 # ACDB
 vendor/etc/acdbdata/adsp_avs_config.acdb
@@ -113,17 +113,8 @@ vendor/lib64/camera/fdconfigvideo.bin
 vendor/lib64/camera/fdconfigvideolite.bin
 vendor/lib64/hw/camera.qcom.so
 vendor/lib64/hw/com.qti.chi.override.so
-vendor/lib64/libarcsoft_dualcam_bokeh_api.so
-vendor/lib64/libarcsoft_dualcam_refocus_left.so
-vendor/lib64/libarcsoft_dualcam_refocus_preview.so
-vendor/lib64/libarcsoft_dualcam_refocus_right.so
-vendor/lib64/libarcsoft_portrait_distortion_correction.so
 
 # Fingerprint
-vendor/lib/hw/goodix.fod.msmnile.so
-vendor/lib/fp_hal_extension.so
-vendor/lib/libgf_ud_hal.so
-vendor/lib/vendor.goodix.hardware.biometrics.fingerprint@2.1.so
 vendor/lib64/hw/goodix.fod.msmnile.so
 vendor/lib64/fp_hal_extension.so
 vendor/lib64/libarm_proxy_skel.so
@@ -216,6 +207,3 @@ vendor/firmware/aw8697_haptic_168.bin
 vendor/firmware/aw8697_haptic_170.bin
 vendor/firmware/aw8697_haptic_172.bin
 vendor/firmware/aw8697_haptic_174.bin
-
-# Vibrator HAL - from OnePlus7Pro-user-10-QKQ1.190716.003-2101212056-release-keys
-vendor/lib64/hw/vibrator.default.so|f4b09524bbd1b4c7a91191d5793ae000e3cde0af
